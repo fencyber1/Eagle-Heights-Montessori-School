@@ -46,8 +46,13 @@ function Index() {
     <main>
       <JsonLd data={schoolSchema} />
       <section className="relative overflow-hidden bg-ink text-paper">
-        {/* TODO: add public/hero.png with an SIMS photo and restore the hero <img /> */}
-        <div className="absolute inset-0 bg-ink" />
+        <img
+          src="/gallery/sims/sims-01.jpg"
+          alt="SIMS graduates throwing caps in the air at the graduation ceremony"
+          fetchPriority="high"
+          className="absolute inset-0 size-full object-cover"
+        />
+        <div className="absolute inset-0 bg-ink/70" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/40 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:py-32 lg:py-40">
           <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-paper/90">

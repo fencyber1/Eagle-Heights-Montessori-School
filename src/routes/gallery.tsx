@@ -16,13 +16,16 @@ export const Route = createFileRoute("/gallery")({
   component: Gallery,
 });
 
-// TODO: add SIMS photos to public/gallery/sims/ as
-// sims-01.jpg, sims-02.jpg, ... then point `photos` at them:
-//   const photos = Array.from({ length: N }, (_, i) => ({
-//     src: `/gallery/sims/sims-${String(i + 1).padStart(2, "0")}.jpg`,
-//     alt: `SIMS International School gallery photo ${i + 1}`,
-//   }));
-const photos: Array<{ src: string; alt: string }> = [];
+const photos: Array<{ src: string; alt: string }> = [
+  {
+    src: "/gallery/sims/sims-01.jpg",
+    alt: "SIMS graduates throwing purple caps in the air at the graduation ceremony",
+  },
+  {
+    src: "/gallery/sims/sims-02.jpg",
+    alt: "SIMS pupils in yellow school uniforms joining hands in prayer",
+  },
+];
 
 function Gallery() {
   return (
@@ -32,7 +35,7 @@ function Gallery() {
         title="Life at SIMS."
         intro="Classrooms, outdoor play, reading corners, and celebrations — a look inside SIMS International School, Ablekuma New Town, Accra."
       />
-      <Section eyebrow="Photo gallery" title="New photos coming soon.">
+      <Section eyebrow="Photo gallery" title="Moments at SIMS.">
         {photos.length === 0 ? (
           <div className="grid place-items-center rounded-lg border border-ink/10 bg-surface p-12 text-center">
             <div>
