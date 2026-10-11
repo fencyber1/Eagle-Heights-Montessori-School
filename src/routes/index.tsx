@@ -52,8 +52,8 @@ function Index() {
           fetchPriority="high"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0 bg-ink/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/40 to-transparent" />
+        <div className="absolute inset-0 bg-ink/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/40 to-ink/5" />
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:py-32 lg:py-40">
           <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-paper/90">
             <span className="h-px w-10 bg-action" /> International School in Ghana · Ablekuma New
