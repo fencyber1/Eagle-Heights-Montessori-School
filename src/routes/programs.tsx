@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section } from "@/components/school-shared";
+import { StageTabs, TabsContent, type StageTab } from "@/components/stage-tabs";
 
 import { seoPage } from "@/lib/seo";
 
@@ -87,24 +88,45 @@ function Programs() {
         intro="SIMS International School teaches the Ghana curriculum enriched with the international approach — hands-on, self-directed learning in the early years, growing into strong academics and BECE success from Creche to JHS."
       />
       <Section eyebrow="Learning pathways" title="A gentle journey from first steps to graduation.">
-        <div className="grid gap-5 md:grid-cols-2">
-          {stages.map(([name, ages, items]) => (
-            <article
-              key={name as string}
-              className="rounded-lg border border-ink/10 bg-surface p-6"
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-action">
-                {name as string}
-              </p>
-              <h2 className="mt-2 text-2xl font-black">{ages as string}</h2>
-              <ul className="mt-5 grid gap-2 text-sm text-ink-soft">
-                {(items as string[]).map((i) => (
-                  <li key={i}>→ {i}</li>
-                ))}
-              </ul>
-            </article>
+        <StageTabs
+          tabs={
+            [
+              { value: "early-years", label: "Early Years" },
+              { value: "primary", label: "Primary" },
+              { value: "jhs", label: "JHS" },
+            ] satisfies Array<StageTab>
+          }
+        >
+          {[
+            { value: "early-years", indexes: [0, 1, 2] },
+            { value: "primary", indexes: [3, 4] },
+            { value: "jhs", indexes: [5] },
+          ].map((group) => (
+            <TabsContent key={group.value} value={group.value} className="mt-8">
+              <div className="grid gap-5 md:grid-cols-2">
+                {group.indexes.map((i) => {
+                  const [name, ages, items] = stages[i];
+                  return (
+                    <article
+                      key={name as string}
+                      className="rounded-lg border border-ink/10 bg-surface p-6"
+                    >
+                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-action">
+                        {name as string}
+                      </p>
+                      <h2 className="mt-2 text-2xl font-black">{ages as string}</h2>
+                      <ul className="mt-5 grid gap-2 text-sm text-ink-soft">
+                        {(items as string[]).map((item) => (
+                          <li key={item}>→ {item}</li>
+                        ))}
+                      </ul>
+                    </article>
+                  );
+                })}
+              </div>
+            </TabsContent>
           ))}
-        </div>
+        </StageTabs>
       </Section>
       <Section eyebrow="Our curriculum" title="Ghana curriculum, global outlook.">
         <p className="max-w-3xl leading-relaxed text-ink-soft">
