@@ -67,6 +67,7 @@
   --color-trust-deep: var(--trust-deep);
   --color-growth: var(--growth);
   --color-action: var(--action);
+  --color-soar: var(--soar);
   --color-action-foreground: var(--action-foreground);
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
@@ -81,6 +82,7 @@
   --trust-deep: oklch(0.31 0.09 252);
   --growth: oklch(0.5 0.105 157);
   --action: oklch(0.52 0.2 20);
+  --soar: oklch(0.6 0.24 25);
   --action-foreground: oklch(0.99 0.003 250);
   --paper: oklch(0.96 0.012 255);
   --paper-2: oklch(0.92 0.018 255);

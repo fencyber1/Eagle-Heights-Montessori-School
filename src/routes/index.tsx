@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const HERO_VERBS = ["Lead", "Thrive", "Shine", "Soar"] as const;
+const HERO_VERBS = ["Soar", "Lead", "Thrive", "Shine"] as const;
 
 function RotatingHeroVerb() {
   const [index, setIndex] = useState(0);
@@ -33,7 +33,7 @@ function RotatingHeroVerb() {
 
   return (
     <>
-      <span className="sr-only">Lead</span>
+      <span className="sr-only">Soar</span>
       <span key={HERO_VERBS[index]} aria-hidden="true" className="animate-word-in">
         {HERO_VERBS[index]}
       </span>
@@ -61,7 +61,7 @@ function Index() {
           </p>
           <h1 className="mt-6 max-w-5xl text-5xl font-black leading-[0.95] sm:text-6xl lg:text-7xl">
             Learn. Grow.{" "}
-            <span className="font-serif font-medium italic text-action">
+            <span className="font-serif font-medium italic text-soar [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
               <RotatingHeroVerb /> together.
             </span>
           </h1>
