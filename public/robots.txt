@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://evergreenfield-montessori.vercel.app/sitemap.xml
+Sitemap: https://sims-international.vercel.app/sitemap.xml

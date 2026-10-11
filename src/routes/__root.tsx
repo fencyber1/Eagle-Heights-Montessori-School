@@ -79,29 +79,36 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Evergreenfield Montessori School — Montessori Creche to JHS in Accra, Ghana" },
-      { name: "description", content: "Evergreenfield Montessori School, Ablekuma Fan-Milk, Accra — Creche to JHS. Ghana curriculum with the Montessori method." },
-      { name: "author", content: "Evergreenfield Montessori School" },
+      { title: "SIMS International School — Creche to JHS in Accra, Ghana" },
+      {
+        name: "description",
+        content:
+          "SIMS International School, Ablekuma New Town, Accra — Creche to JHS. Ghana curriculum with the international approach.",
+      },
+      { name: "author", content: "SIMS International School" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Evergreenfield Montessori School" },
+      { property: "og:site_name", content: "SIMS International School" },
       { property: "og:locale", content: "en_GH" },
-      { property: "og:image", content: "https://evergreenfield-montessori.vercel.app/og-image.jpg" },
+      { property: "og:image", content: "https://sims-international.vercel.app/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#041a36" },
+      { name: "theme-color", content: "#711c2a" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/logo.jpg", type: "image/jpeg" },
-      { rel: "apple-touch-icon", href: "/logo.jpg" },
+      { rel: "icon", href: "/logo.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/logo.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -129,7 +136,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteShell><Outlet /></SiteShell>
+      <SiteShell>
+        <Outlet />
+      </SiteShell>
       <AdmissionsChat />
     </QueryClientProvider>
   );

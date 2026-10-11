@@ -4,7 +4,19 @@ import { useState, type FormEvent, type ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 
-export function PageHero({ eyebrow, title, intro, image, imageAlt }: { eyebrow: string; title: string; intro: string; image?: string; imageAlt?: string }) {
+export function PageHero({
+  eyebrow,
+  title,
+  intro,
+  image,
+  imageAlt,
+}: {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  image?: string;
+  imageAlt?: string;
+}) {
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
       <div className="absolute -right-20 -top-24 size-80 rounded-full bg-trust/30 blur-3xl" />
@@ -12,17 +24,56 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt }: { eyebrow: 
         <div className={image ? "lg:col-span-7" : "lg:col-span-9"}>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-action">{eyebrow}</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-black leading-none sm:text-6xl">{title}</h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-paper/75 sm:text-lg">{intro}</p>
-          <Button asChild className="mt-7 rounded-none bg-action text-action-foreground hover:bg-action/90"><Link to="/contact">Contact Admissions <ArrowRight /></Link></Button>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-paper/75 sm:text-lg">
+            {intro}
+          </p>
+          <Button
+            asChild
+            className="mt-7 rounded-none bg-action text-action-foreground hover:bg-action/90"
+          >
+            <Link to="/contact">
+              Contact Admissions <ArrowRight />
+            </Link>
+          </Button>
         </div>
-        {image && <div className="lg:col-span-5"><div className="-skew-x-3 overflow-hidden rounded-lg border border-paper/20 bg-paper/10 p-2"><img src={image} alt={imageAlt ?? "Evergreenfield Montessori School"} width={1280} height={900} className="aspect-[4/3] w-full object-cover" /></div></div>}
+        {image && (
+          <div className="lg:col-span-5">
+            <div className="-skew-x-3 overflow-hidden rounded-lg border border-paper/20 bg-paper/10 p-2">
+              <img
+                src={image}
+                alt={imageAlt ?? "SIMS International School"}
+                width={1280}
+                height={900}
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
-export function Section({ eyebrow, title, children, dark = false }: { eyebrow: string; title: string; children: ReactNode; dark?: boolean }) {
-  return <section className={dark ? "bg-ink py-16 text-paper" : "bg-paper py-16 text-ink"}><div className="mx-auto max-w-7xl px-5"><p className="text-xs font-bold uppercase tracking-[0.2em] text-action">{eyebrow}</p><h2 className="mt-2 max-w-3xl text-3xl font-black sm:text-4xl">{title}</h2><div className="mt-8">{children}</div></div></section>;
+export function Section({
+  eyebrow,
+  title,
+  children,
+  dark = false,
+}: {
+  eyebrow: string;
+  title: string;
+  children: ReactNode;
+  dark?: boolean;
+}) {
+  return (
+    <section className={dark ? "bg-ink py-16 text-paper" : "bg-paper py-16 text-ink"}>
+      <div className="mx-auto max-w-7xl px-5">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-action">{eyebrow}</p>
+        <h2 className="mt-2 max-w-3xl text-3xl font-black sm:text-4xl">{title}</h2>
+        <div className="mt-8">{children}</div>
+      </div>
+    </section>
+  );
 }
 
 export function ContactForm({ compact = false }: { compact?: boolean }) {
@@ -32,7 +83,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
     const values = new FormData(event.currentTarget);
     const get = (name: string) => String(values.get(name) ?? "").trim();
     const lines = [
-      "Hello Evergreenfield Montessori School — admission enquiry",
+      "Hello SIMS International School — admission enquiry",
       "",
       `Parent: ${get("name")}`,
       `Phone: ${get("phone")}`,
@@ -43,20 +94,95 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
       lines.push("");
       lines.push(`Message: ${get("message")}`);
     }
-    window.open(`https://wa.me/233553355377?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+    window.open(
+      `https://wa.me/233531799325?text=${encodeURIComponent(lines.join("\n"))}`,
+      "_blank",
+      "noopener",
+    );
     setSent(true);
   }
   return (
-    <form onSubmit={submit} className="rounded-lg border border-paper/20 bg-paper/10 p-5 backdrop-blur-md sm:p-7">
+    <form
+      onSubmit={submit}
+      className="rounded-lg border border-paper/20 bg-paper/10 p-5 backdrop-blur-md sm:p-7"
+    >
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="text-sm text-paper/80">Parent name<input required name="name" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="Your name" /></label>
-        <label className="text-sm text-paper/80">Email<input required type="email" name="email" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="yourname@gmail.com" /></label>
+        <label className="text-sm text-paper/80">
+          Parent name
+          <input
+            required
+            name="name"
+            className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action"
+            placeholder="Your name"
+          />
+        </label>
+        <label className="text-sm text-paper/80">
+          Email
+          <input
+            required
+            type="email"
+            name="email"
+            className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action"
+            placeholder="yourname@gmail.com"
+          />
+        </label>
       </div>
-      <label className="mt-4 block text-sm text-paper/80">Phone number<input required type="tel" inputMode="tel" name="phone" className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="055 335 5377" /></label>
-      <label className="mt-4 block text-sm text-paper/80">Class of interest<select name="class" className="mt-1 w-full rounded-md border border-paper/20 bg-ink px-3 py-2.5 text-paper outline-none focus:border-action"><option>Creche</option><option>Nursery</option><option>Kindergarten</option><option>Primary</option><option>JHS</option><option>Not sure yet</option></select></label>
-      {!compact && <label className="mt-4 block text-sm text-paper/80">How can we help?<textarea required name="message" rows={4} className="mt-1 w-full resize-none rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action" placeholder="Tell us about your child and what you would like to know." /></label>}
-      <Button type="submit" className="mt-5 h-11 w-full rounded-none bg-action text-action-foreground hover:bg-action/90"><Send /> Send to Admissions</Button>
-      {sent ? <p role="status" className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-paper"><Check className="size-4 text-growth" /> WhatsApp is opening — press send there to reach admissions.</p> : <p className="mt-3 text-center text-[11px] text-paper/50">Prefer to talk? Call 055 335 5377.</p>}
+      <label className="mt-4 block text-sm text-paper/80">
+        Phone number
+        <input
+          required
+          type="tel"
+          inputMode="tel"
+          name="phone"
+          className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action"
+          placeholder="053 179 9325"
+        />
+      </label>
+      <label className="mt-4 block text-sm text-paper/80">
+        Class of interest
+        <select
+          name="class"
+          className="mt-1 w-full rounded-md border border-paper/20 bg-ink px-3 py-2.5 text-paper outline-none focus:border-action"
+        >
+          <option>Creche</option>
+          <option>Nursery</option>
+          <option>Kindergarten</option>
+          <option>Primary</option>
+          <option>JHS</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      {!compact && (
+        <label className="mt-4 block text-sm text-paper/80">
+          How can we help?
+          <textarea
+            required
+            name="message"
+            rows={4}
+            className="mt-1 w-full resize-none rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action"
+            placeholder="Tell us about your child and what you would like to know."
+          />
+        </label>
+      )}
+      <Button
+        type="submit"
+        className="mt-5 h-11 w-full rounded-none bg-action text-action-foreground hover:bg-action/90"
+      >
+        <Send /> Send to Admissions
+      </Button>
+      {sent ? (
+        <p
+          role="status"
+          className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-paper"
+        >
+          <Check className="size-4 text-growth" /> WhatsApp is opening — press send there to reach
+          admissions.
+        </p>
+      ) : (
+        <p className="mt-3 text-center text-[11px] text-paper/50">
+          Prefer to talk? Call 053 179 9325.
+        </p>
+      )}
     </form>
   );
 }
@@ -64,18 +190,90 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
 const answers = [
   ["How do I apply?", "Visit Admissions for the four-step application guide and enquiry form."],
   ["Can I tour the campus?", "Yes. Use Contact Admissions to request a weekday visit."],
-  ["What ages do you serve?", "We welcome children from 18 months to 15 years — from Creche to JHS — call 055 335 5377 and we will help with class placement."],
+  [
+    "What ages do you serve?",
+    "We welcome children from 18 months to 15 years — from Creche to JHS — call 053 179 9325 and we will help with class placement.",
+  ],
 ] as const;
 
 export function AdmissionsChat() {
   const [open, setOpen] = useState(false);
   const [answer, setAnswer] = useState("Choose a common question below.");
-  return <div className="fixed bottom-20 right-4 z-40 hidden sm:block lg:bottom-5">
-    {open && <div className="mb-3 w-[min(22rem,calc(100vw-2rem))] rounded-lg border border-ink/10 bg-paper p-4 shadow-2xl"><div className="flex items-center justify-between"><div><p className="font-black text-ink">Admissions assistant</p><p className="text-xs text-ink-soft">Ask us anything</p></div><Button size="icon" variant="ghost" onClick={() => setOpen(false)} aria-label="Close chat"><X /></Button></div><div className="mt-4 rounded-md bg-paper-2 p-3 text-sm text-ink">{answer}</div><div className="mt-3 grid gap-2">{answers.map(([question, response]) => <Button key={question} type="button" variant="outline" className="h-auto justify-start whitespace-normal py-2 text-left" onClick={() => setAnswer(response)}>{question}</Button>)}</div></div>}
-    <Button onClick={() => setOpen((value) => !value)} className="ml-auto size-12 rounded-full bg-action text-action-foreground shadow-xl hover:bg-action/90" aria-label="Open admissions chat"><MessageCircle /></Button>
-  </div>;
+  return (
+    <div className="fixed bottom-20 right-4 z-40 hidden sm:block lg:bottom-5">
+      {open && (
+        <div className="mb-3 w-[min(22rem,calc(100vw-2rem))] rounded-lg border border-ink/10 bg-paper p-4 shadow-2xl">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="font-black text-ink">Admissions assistant</p>
+              <p className="text-xs text-ink-soft">Ask us anything</p>
+            </div>
+            <Button
+              size="icon"
+              variant="ghost"
+              onClick={() => setOpen(false)}
+              aria-label="Close chat"
+            >
+              <X />
+            </Button>
+          </div>
+          <div className="mt-4 rounded-md bg-paper-2 p-3 text-sm text-ink">{answer}</div>
+          <div className="mt-3 grid gap-2">
+            {answers.map(([question, response]) => (
+              <Button
+                key={question}
+                type="button"
+                variant="outline"
+                className="h-auto justify-start whitespace-normal py-2 text-left"
+                onClick={() => setAnswer(response)}
+              >
+                {question}
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
+      <Button
+        onClick={() => setOpen((value) => !value)}
+        className="ml-auto size-12 rounded-full bg-action text-action-foreground shadow-xl hover:bg-action/90"
+        aria-label="Open admissions chat"
+      >
+        <MessageCircle />
+      </Button>
+    </div>
+  );
 }
 
-export function StatGrid({ items, dark = false }: { items: Array<[string, string]>; dark?: boolean }) {
-  return <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{items.map(([value, label]) => <div key={label} className={dark ? "rounded-lg border border-paper/15 bg-paper/10 p-5" : "rounded-lg border border-ink/10 bg-surface p-5"}><dt className="text-3xl font-black">{value}</dt><dd className={dark ? "mt-1 text-xs font-bold uppercase tracking-[0.14em] text-paper/60" : "mt-1 text-xs font-bold uppercase tracking-[0.14em] text-ink-soft"}>{label}</dd></div>)}</dl>;
+export function StatGrid({
+  items,
+  dark = false,
+}: {
+  items: Array<[string, string]>;
+  dark?: boolean;
+}) {
+  return (
+    <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      {items.map(([value, label]) => (
+        <div
+          key={label}
+          className={
+            dark
+              ? "rounded-lg border border-paper/15 bg-paper/10 p-5"
+              : "rounded-lg border border-ink/10 bg-surface p-5"
+          }
+        >
+          <dt className="text-3xl font-black">{value}</dt>
+          <dd
+            className={
+              dark
+                ? "mt-1 text-xs font-bold uppercase tracking-[0.14em] text-paper/60"
+                : "mt-1 text-xs font-bold uppercase tracking-[0.14em] text-ink-soft"
+            }
+          >
+            {label}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  );
 }

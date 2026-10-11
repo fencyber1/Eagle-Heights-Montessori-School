@@ -8,19 +8,19 @@ import { seoPage } from "@/lib/seo";
 export const Route = createFileRoute("/gallery")({
   head: () =>
     seoPage({
-      title: "Photo Gallery | Evergreenfield Montessori School",
+      title: "Photo Gallery | SIMS International School",
       description:
-        "See life at Evergreenfield Montessori School at Ablekuma Fan-Milk, Accra, Ghana — classrooms, outdoor play, reading, and school events from Creche to JHS.",
+        "See life at SIMS International School at Ablekuma New Town, Accra, Ghana — classrooms, outdoor play, reading, and school events from Creche to JHS.",
       path: "/gallery",
     }),
   component: Gallery,
 });
 
-// TODO: add Evergreenfield photos to public/gallery/evergreenfield/ as
-// evergreenfield-01.jpg, evergreenfield-02.jpg, ... then point `photos` at them:
+// TODO: add SIMS photos to public/gallery/sims/ as
+// sims-01.jpg, sims-02.jpg, ... then point `photos` at them:
 //   const photos = Array.from({ length: N }, (_, i) => ({
-//     src: `/gallery/evergreenfield/evergreenfield-${String(i + 1).padStart(2, "0")}.jpg`,
-//     alt: `Evergreenfield Montessori School gallery photo ${i + 1}`,
+//     src: `/gallery/sims/sims-${String(i + 1).padStart(2, "0")}.jpg`,
+//     alt: `SIMS International School gallery photo ${i + 1}`,
 //   }));
 const photos: Array<{ src: string; alt: string }> = [];
 
@@ -29,8 +29,8 @@ function Gallery() {
     <main>
       <PageHero
         eyebrow="School gallery"
-        title="Life at Evergreenfield."
-        intro="Classrooms, outdoor play, reading corners, and celebrations — a look inside Evergreenfield Montessori School, Ablekuma Fan-Milk, Accra."
+        title="Life at SIMS."
+        intro="Classrooms, outdoor play, reading corners, and celebrations — a look inside SIMS International School, Ablekuma New Town, Accra."
       />
       <Section eyebrow="Photo gallery" title="New photos coming soon.">
         {photos.length === 0 ? (
@@ -38,10 +38,13 @@ function Gallery() {
             <div>
               <p className="text-xl font-black">Our photo wall is being prepared.</p>
               <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-soft">
-                We are adding fresh Evergreenfield Montessori School pictures. Please check
-                back soon — or book a visit to see the school in person.
+                We are adding fresh SIMS International School pictures. Please check back soon — or
+                book a visit to see the school in person.
               </p>
-              <Button asChild className="mt-6 rounded-none bg-action text-action-foreground hover:bg-action/90">
+              <Button
+                asChild
+                className="mt-6 rounded-none bg-action text-action-foreground hover:bg-action/90"
+              >
                 <Link to="/contact">Book a school visit</Link>
               </Button>
             </div>

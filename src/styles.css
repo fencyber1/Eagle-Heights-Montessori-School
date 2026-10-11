@@ -80,7 +80,7 @@
   --trust: oklch(0.43 0.115 252);
   --trust-deep: oklch(0.31 0.09 252);
   --growth: oklch(0.5 0.105 157);
-  --action: oklch(0.66 0.22 40);
+  --action: oklch(0.43 0.14 22);
   --action-foreground: oklch(0.99 0.003 250);
   --paper: oklch(0.96 0.012 255);
   --paper-2: oklch(0.92 0.018 255);
@@ -166,18 +166,38 @@
     letter-spacing: 0;
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
 
-  :focus-visible { outline: 2px solid var(--action); outline-offset: 3px; }
+  :focus-visible {
+    outline: 2px solid var(--action);
+    outline-offset: 3px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @keyframes word-in {
-  from { opacity: 0; transform: translateY(0.35em); filter: blur(4px); }
-  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 .animate-word-in {
