@@ -79,15 +79,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SIMS International School — Creche to JHS in Accra, Ghana" },
+      { title: "Eagle Heights Montessori School — Nursery to JHS 1 in Tema & Sebrepor, Ghana" },
       {
         name: "description",
         content:
-          "SIMS International School, Ablekuma New Town, Accra — Creche to JHS. Ghana curriculum with the international approach.",
+          "Eagle Heights Montessori School, Amsterdam Street Sebrepor & Tema — Nursery to JHS 1. Montessori-based early childhood and primary education.",
       },
-      { name: "author", content: "SIMS International School" },
+      { name: "author", content: "Eagle Heights Montessori School" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "SIMS International School" },
+      { property: "og:site_name", content: "Eagle Heights Montessori School" },
       { property: "og:locale", content: "en_GH" },
       { property: "og:image", content: "https://sims-international.vercel.app/og-image.png" },
       { property: "og:image:width", content: "1200" },

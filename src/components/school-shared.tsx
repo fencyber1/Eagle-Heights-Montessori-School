@@ -41,7 +41,7 @@ export function PageHero({
             <div className="-skew-x-3 overflow-hidden rounded-lg border border-paper/20 bg-paper/10 p-2">
               <img
                 src={image}
-                alt={imageAlt ?? "SIMS International School"}
+                alt={imageAlt ?? "Eagle Heights Montessori School"}
                 width={1280}
                 height={900}
                 className="aspect-[4/3] w-full object-cover"
@@ -83,7 +83,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
     const values = new FormData(event.currentTarget);
     const get = (name: string) => String(values.get(name) ?? "").trim();
     const lines = [
-      "Hello SIMS International School — admission enquiry",
+      "Hello Eagle Heights Montessori School — admission enquiry",
       "",
       `Parent: ${get("name")}`,
       `Phone: ${get("phone")}`,
@@ -95,7 +95,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
       lines.push(`Message: ${get("message")}`);
     }
     window.open(
-      `https://wa.me/233531799325?text=${encodeURIComponent(lines.join("\n"))}`,
+      `https://wa.me/233208853140?text=${encodeURIComponent(lines.join("\n"))}`,
       "_blank",
       "noopener",
     );
@@ -135,7 +135,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
           inputMode="tel"
           name="phone"
           className="mt-1 w-full rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-paper outline-none placeholder:text-paper/40 focus:border-action"
-          placeholder="053 179 9325"
+          placeholder="020 885 3140"
         />
       </label>
       <label className="mt-4 block text-sm text-paper/80">
@@ -144,11 +144,11 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
           name="class"
           className="mt-1 w-full rounded-md border border-paper/20 bg-ink px-3 py-2.5 text-paper outline-none focus:border-action"
         >
-          <option>Creche</option>
           <option>Nursery</option>
           <option>Kindergarten</option>
-          <option>Primary</option>
-          <option>JHS</option>
+          <option>Lower Primary</option>
+          <option>Upper Primary</option>
+          <option>JHS 1</option>
           <option>Not sure yet</option>
         </select>
       </label>
@@ -180,7 +180,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
         </p>
       ) : (
         <p className="mt-3 text-center text-[11px] text-paper/50">
-          Prefer to talk? Call 053 179 9325.
+          Prefer to talk? Call +233 20 885 3140.
         </p>
       )}
     </form>
@@ -189,10 +189,10 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
 
 const answers = [
   ["How do I apply?", "Visit Admissions for the four-step application guide and enquiry form."],
-  ["Can I tour the campus?", "Yes. Use Contact Admissions to request a weekday visit."],
+  ["Can I tour the campus?", "Yes. Use Contact Admissions to request a visit to our Sebrepor or Tema branch."],
   [
     "What ages do you serve?",
-    "We welcome children from 18 months to 15 years — from Creche to JHS — call 053 179 9325 and we will help with class placement.",
+    "We welcome children from Nursery to JHS 1 — Montessori-based early childhood and primary education — call +233 20 885 3140 and we will help with class placement.",
   ],
 ] as const;
 

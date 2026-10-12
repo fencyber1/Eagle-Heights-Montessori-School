@@ -8,9 +8,9 @@ import { seoPage } from "@/lib/seo";
 export const Route = createFileRoute("/programs")({
   head: () =>
     seoPage({
-      title: "Programs & Curriculum — Creche to JHS | SIMS International School",
+      title: "Programs & Curriculum — Nursery to JHS 1 | Eagle Heights Montessori School",
       description:
-        "Explore SIMS International School's Ghana curriculum with the international approach — Creche, Nursery, Kindergarten, Primary and JHS at Ablekuma New Town, Accra, Ghana.",
+        "Explore Eagle Heights Montessori School's Montessori-based early childhood and primary education — Nursery, Kindergarten, Primary and JHS 1 in Sebrepor & Tema, Greater Accra Region.",
       path: "/programs",
     }),
   component: Programs,
@@ -18,8 +18,8 @@ export const Route = createFileRoute("/programs")({
 
 const stages = [
   [
-    "Creche",
-    "Gentle first steps · 18 months – 2 years",
+    "Nursery",
+    "Gentle first steps · Ages 2 – 3",
     [
       "Warm, attentive care",
       "Sensory play and discovery",
@@ -28,23 +28,13 @@ const stages = [
     ],
   ],
   [
-    "Nursery",
-    "Confident little explorers · Ages 3 – 4",
+    "Kindergarten",
+    "Confident little explorers · Ages 4 – 5",
     [
       "Phonics and early language",
       "Numbers through play",
       "Art, colour, and creativity",
       "Sharing, manners, and independence",
-    ],
-  ],
-  [
-    "Kindergarten",
-    "Ready for primary school · Ages 4 – 5",
-    [
-      "Reading and writing readiness",
-      "Early mathematics",
-      "Nature and the world around us",
-      "Confidence, focus, and school habits",
     ],
   ],
   [
@@ -68,13 +58,13 @@ const stages = [
     ],
   ],
   [
-    "JHS",
-    "Ready for secondary school · JHS 1 – 3",
+    "JHS 1",
+    "Ready for the next step · JHS 1",
     [
-      "Full BECE subject coverage",
-      "English, Maths, Science and ICT mastery",
+      "English, Maths, Science and ICT foundations",
       "French, RME and career technology",
-      "Guidance, counselling and BECE preparation",
+      "Reading fluency and good study habits",
+      "Guidance and counselling",
     ],
   ],
 ];
@@ -85,22 +75,22 @@ function Programs() {
       <PageHero
         eyebrow="Programs & curriculum"
         title="Learning that grows with your child."
-        intro="SIMS International School teaches the Ghana curriculum enriched with the international approach — hands-on, self-directed learning in the early years, growing into strong academics and BECE success from Creche to JHS."
+        intro="Eagle Heights Montessori School offers Montessori-based early childhood and primary education — hands-on, self-directed learning in the early years, growing into strong academics from Nursery to JHS 1."
       />
-      <Section eyebrow="Learning pathways" title="A gentle journey from first steps to graduation.">
+      <Section eyebrow="Learning pathways" title="A gentle journey from Nursery to JHS 1.">
         <StageTabs
           tabs={
             [
               { value: "early-years", label: "Early Years" },
               { value: "primary", label: "Primary" },
-              { value: "jhs", label: "JHS" },
+              { value: "jhs", label: "JHS 1" },
             ] satisfies Array<StageTab>
           }
         >
           {[
-            { value: "early-years", indexes: [0, 1, 2] },
-            { value: "primary", indexes: [3, 4] },
-            { value: "jhs", indexes: [5] },
+            { value: "early-years", indexes: [0, 1] },
+            { value: "primary", indexes: [2, 3] },
+            { value: "jhs", indexes: [4] },
           ].map((group) => (
             <TabsContent key={group.value} value={group.value} className="mt-8">
               <div className="grid gap-5 md:grid-cols-2">
@@ -128,12 +118,12 @@ function Programs() {
           ))}
         </StageTabs>
       </Section>
-      <Section eyebrow="Our curriculum" title="Ghana curriculum, global outlook.">
+      <Section eyebrow="Our curriculum" title="Montessori-based, child-centred.">
         <p className="max-w-3xl leading-relaxed text-ink-soft">
-          In Creche, Nursery and Kindergarten, children learn through practical life, sensorial
-          work, language and mathematics — every step through play and discovery. From Primary
-          upward, the Ghana standards-based curriculum takes centre stage, taught with the same
-          hands-on spirit.
+          In Nursery and Kindergarten, children learn through practical life, sensorial work, language
+          and mathematics — every step through play and discovery. From Primary to JHS 1, strong
+          foundations in literacy, numeracy and character take centre stage, taught with the same
+          hands-on Montessori spirit.
         </p>
         <h3 className="mt-8 text-sm font-black uppercase tracking-[0.18em] text-action">
           Early years focus
@@ -152,7 +142,7 @@ function Programs() {
           ))}
         </div>
         <h3 className="mt-8 text-sm font-black uppercase tracking-[0.18em] text-action">
-          Primary & JHS subjects
+          Primary & JHS 1 subjects
         </h3>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {[

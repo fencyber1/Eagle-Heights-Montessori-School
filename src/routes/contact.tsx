@@ -6,9 +6,9 @@ import { JsonLd, faqSchema, seoPage } from "@/lib/seo";
 export const Route = createFileRoute("/contact")({
   head: () =>
     seoPage({
-      title: "Contact Admissions — SIMS International School, Accra",
+      title: "Contact Admissions — Eagle Heights Montessori School, Tema & Sebrepor",
       description:
-        "Contact SIMS International School at Ablekuma New Town, Accra, Ghana — call 053 179 9325, WhatsApp, email, or send an enquiry.",
+        "Contact Eagle Heights Montessori School at Amsterdam Street, Sebrepor & PX9Q+HJQ Tema — call +233 20 885 3140, WhatsApp, email, or send an enquiry. Mon–Sat open 24 hours, Sun closed.",
       path: "/contact",
     }),
   component: Contact,
@@ -20,25 +20,25 @@ function Contact() {
       <PageHero
         eyebrow="Contact admissions"
         title="Let’s talk about what your child needs next."
-        intro="Choose the way that feels easiest — call 053 179 9325, WhatsApp us, or visit us at Ablekuma New Town, Accra."
+        intro="Choose the way that feels easiest — call +233 20 885 3140, WhatsApp us, or visit us at Amsterdam Street, Sebrepor or PX9Q+HJQ, Tema."
       />
       <Section eyebrow="Get in touch" title="A helpful answer is one step away.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
-            [Phone, "Call", "053 179 9325", "tel:+233531799325"],
+            [Phone, "Call", "+233 20 885 3140", "tel:+233208853140"],
             [
               Mail,
               "Email",
-              "info@simsinternational.edu.gh",
-              "mailto:info@simsinternational.edu.gh",
+              "info@eagleheightsmontessori.edu.gh",
+              "mailto:info@eagleheightsmontessori.edu.gh",
             ],
             [
               MessageCircle,
               "WhatsApp",
-              "Chat on WhatsApp — 053 179 9325",
-              "https://wa.me/233531799325",
+              "Chat on WhatsApp — +233 20 885 3140",
+              "https://wa.me/233208853140",
             ],
-            [Clock, "Hours", "Mon–Fri · 6:00am–5:00pm · Sat–Sun Closed", "#hours"],
+            [Clock, "Hours", "Mon–Sat · Open 24 hours · Sun Closed", "#hours"],
           ].map(([Icon, title, text, href]) => {
             const I = Icon as typeof Phone;
             return (
@@ -66,40 +66,52 @@ function Contact() {
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               <div className="rounded-lg border border-paper/15 bg-paper/10 p-5">
                 <MapPin className="size-5 text-action" />
-                <p className="mt-3 font-bold">SIMS International School</p>
+                <p className="mt-3 font-bold">Eagle Heights Montessori School</p>
                 <p className="mt-1 text-sm text-paper/60">
-                  Abase Road, Ablekuma New Town, Accra, Ghana
+                  Sebrepor Branch: Amsterdam Street, Sebrepor, Kpone Katamanso, Greater Accra Region
                 </p>
-                <p className="mt-1 text-sm text-paper/60">Plus code: JMMM+GH Ablekuma New Town</p>
                 <p className="mt-1 text-sm text-paper/60">
-                  Mon–Fri · 6:00am–5:00pm · Sat–Sun Closed
+                  Tema Branch: PX9Q+HJQ, Unnamed Road, Tema
+                </p>
+                <p className="mt-1 text-sm text-paper/60">
+                  Mon–Sat · Open 24 hours · Sun Closed
                 </p>
                 <a
-                  href="tel:+233531799325"
+                  href="tel:+233208853140"
                   className="mt-2 block text-sm font-bold text-paper hover:text-action"
                 >
-                  053 179 9325
+                  +233 20 885 3140
                 </a>
                 <Button asChild variant="link" className="mt-2 px-0 text-paper">
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Abase+Road+Ablekuma+New+Town+Accra"
+                    href="https://www.google.com/maps/search/?api=1&query=Amsterdam+Street+Sebrepor+Kpone+Katamanso+Greater+Accra"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Open directions
+                    Open directions (Sebrepor)
+                  </a>
+                </Button>
+                <Button asChild variant="link" className="mt-1 px-0 text-paper">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=PX9Q%2BHJQ+Unnamed+Road+Tema+Ghana"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open directions (Tema)
                   </a>
                 </Button>
               </div>
               <div className="rounded-lg border border-paper/15 bg-paper/10 p-5">
                 <Clock className="size-5 text-action" />
                 <p className="mt-3 font-bold">School hours</p>
-                <p className="mt-1 text-sm text-paper/60">Monday – Friday: 6:00am – 5:00pm</p>
-                <p className="mt-1 text-sm text-paper/60">Saturday – Sunday: Closed</p>
+                <p className="mt-1 text-sm text-paper/60">Monday – Saturday: Open 24 hours</p>
+                <p className="mt-1 text-sm text-paper/60">Sunday: Closed</p>
+                <p className="mt-1 text-sm text-paper/60">Phone: +233 20 885 3140</p>
                 <a
-                  href="tel:+233531799325"
+                  href="tel:+233208853140"
                   className="mt-2 block text-sm font-bold text-paper hover:text-action"
                 >
-                  053 179 9325
+                  +233 20 885 3140
                 </a>
                 <Button asChild variant="link" className="mt-2 px-0 text-paper">
                   <Link to="/admissions">View admissions steps</Link>

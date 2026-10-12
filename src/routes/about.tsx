@@ -7,9 +7,9 @@ import { seoPage } from "@/lib/seo";
 export const Route = createFileRoute("/about")({
   head: () =>
     seoPage({
-      title: "About SIMS International School in Accra, Ghana",
+      title: "About Eagle Heights Montessori School in Tema & Sebrepor, Ghana",
       description:
-        "Meet the mission and values behind SIMS International School — an international school (Creche to JHS) at Ablekuma New Town, Accra, Ghana where children learn through hands-on, loving education.",
+        "Meet the mission and values behind Eagle Heights Montessori School — a Montessori-based school (Nursery to JHS 1) at Amsterdam Street, Sebrepor and Tema, Greater Accra Region where children learn through hands-on, loving education.",
       path: "/about",
     }),
   component: About,
@@ -21,7 +21,7 @@ function About() {
       <PageHero
         eyebrow="About us"
         title="A school should know your child — not just their name."
-        intro="SIMS is a warm, ambitious community where strong relationships give children the courage to stretch themselves — from Creche to JHS."
+        intro="Eagle Heights is a warm, ambitious community where strong relationships give children the courage to stretch themselves — from Nursery to JHS 1."
       />
       <Section eyebrow="Our motto" title="Empowering Our Generation with Knowledge & Skills.">
         <div className="grid gap-8 lg:grid-cols-2">
@@ -44,13 +44,15 @@ function About() {
           </div>
         </div>
       </Section>
-      <Section dark eyebrow="Our story" title="Rooted in community. Ready for the future.">
+      <Section dark eyebrow="Our story" title="Rooted in Tema & Sebrepor. Ready for the future.">
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <p className="leading-relaxed text-paper/70">
-              Founded in 1960, SIMS International School began as a small community school at
-              Ablekuma New Town, Accra, and has grown into a full basic school — Creche to JHS —
-              without losing its personal character.
+              Eagle Heights Montessori School is located on Amsterdam Street in Sebrepor, within the
+              Kpone Katamanso Municipal District in the Greater Accra Region of Ghana, with an
+              additional branch at PX9Q+HJQ, Unnamed Road, Tema. We offer Montessori-based early
+              childhood and primary education — from Nursery to JHS 1 — without losing our personal
+              character.
             </p>
           </div>
           <div className="rounded-lg border border-paper/15 bg-paper/10 p-7">
@@ -62,13 +64,13 @@ function About() {
               <div
                 className="grid size-16 shrink-0 place-items-center rounded-full bg-action text-xl font-black text-action-foreground"
                 role="img"
-                aria-label="School leadership, SIMS International School"
+                aria-label="School leadership, Eagle Heights Montessori School"
               >
-                S
+                E
               </div>
               <div>
                 <p className="font-bold">School Leadership</p>
-                <p className="text-sm text-paper/60">The Head · SIMS International School</p>
+                <p className="text-sm text-paper/60">The Head · Eagle Heights Montessori School</p>
               </div>
             </div>
           </div>

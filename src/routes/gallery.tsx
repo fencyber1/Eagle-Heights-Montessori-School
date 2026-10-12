@@ -8,9 +8,9 @@ import { seoPage } from "@/lib/seo";
 export const Route = createFileRoute("/gallery")({
   head: () =>
     seoPage({
-      title: "Photo Gallery | SIMS International School",
+      title: "Photo Gallery | Eagle Heights Montessori School",
       description:
-        "See life at SIMS International School at Ablekuma New Town, Accra, Ghana — classrooms, outdoor play, reading, and school events from Creche to JHS.",
+        "See life at Eagle Heights Montessori School in Sebrepor & Tema — classrooms, outdoor play, reading, and school events from Nursery to JHS 1.",
       path: "/gallery",
     }),
   component: Gallery,
@@ -19,11 +19,11 @@ export const Route = createFileRoute("/gallery")({
 const photos: Array<{ src: string; alt: string }> = [
   {
     src: "/gallery/sims/sims-01.jpg",
-    alt: "SIMS graduates throwing purple caps in the air at the graduation ceremony",
+    alt: "Eagle Heights graduates throwing purple caps in the air at the graduation ceremony",
   },
   {
     src: "/gallery/sims/sims-02.jpg",
-    alt: "SIMS pupils in yellow school uniforms joining hands in prayer",
+    alt: "Eagle Heights pupils in yellow school uniforms joining hands in prayer",
   },
 ];
 
@@ -32,17 +32,17 @@ function Gallery() {
     <main>
       <PageHero
         eyebrow="School gallery"
-        title="Life at SIMS."
-        intro="Classrooms, outdoor play, reading corners, and celebrations — a look inside SIMS International School, Ablekuma New Town, Accra."
+        title="Life at Eagle Heights."
+        intro="Classrooms, outdoor play, reading corners, and celebrations — a look inside Eagle Heights Montessori School, Sebrepor & Tema."
       />
-      <Section eyebrow="Photo gallery" title="Moments at SIMS.">
+      <Section eyebrow="Photo gallery" title="Moments at Eagle Heights.">
         {photos.length === 0 ? (
           <div className="grid place-items-center rounded-lg border border-ink/10 bg-surface p-12 text-center">
             <div>
               <p className="text-xl font-black">Our photo wall is being prepared.</p>
               <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-soft">
-                We are adding fresh SIMS International School pictures. Please check back soon — or
-                book a visit to see the school in person.
+                We are adding fresh Eagle Heights Montessori School pictures. Please check back soon
+                — or book a visit to see the school in person.
               </p>
               <Button
                 asChild

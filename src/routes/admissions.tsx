@@ -11,9 +11,9 @@ import { seoPage } from "@/lib/seo";
 export const Route = createFileRoute("/admissions")({
   head: () =>
     seoPage({
-      title: "Admissions & Fees — SIMS International School, Accra",
+      title: "Admissions & Fees — Eagle Heights Montessori School, Tema & Sebrepor",
       description:
-        "Apply to SIMS International School, Accra — admission forms collected at the premises, requirements, fee structure (one-time registration + 3 termly payments), and enquiry options.",
+        "Apply to Eagle Heights Montessori School — admission forms collected at the Sebrepor or Tema premises, requirements, fee structure (one-time registration + 3 termly payments), and enquiry options. Call +233 20 885 3140.",
       path: "/admissions",
     }),
   component: Admissions,
@@ -26,7 +26,7 @@ function Admissions() {
       "Start a conversation",
       "Tell us what you are looking for and ask any first questions.",
     ],
-    [School, "Visit SIMS", "Meet teachers, see classes in action, and experience the campus."],
+    [School, "Visit Eagle Heights", "Meet teachers, see classes in action, and experience the campus."],
     [FileText, "Apply", "Complete the application and provide recent school records."],
     [
       UserCheck,
@@ -67,7 +67,7 @@ function Admissions() {
             [
               "Requirements",
               [
-                "Admission forms picked up from the school premises",
+                "Admission forms picked up from the Sebrepor or Tema premises",
                 "Child's birth certificate",
                 "Health/Immunization cards",
                 "A school visit with your child",
@@ -101,13 +101,13 @@ function Admissions() {
                   <p className="leading-relaxed">{list as string}</p>
                   <div className="flex flex-col gap-2">
                     <a
-                      href="tel:+233531799325"
+                      href="tel:+233208853140"
                       className="rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-center font-bold text-paper hover:bg-paper/20"
                     >
-                      Call 053 179 9325
+                      Call +233 20 885 3140
                     </a>
                     <a
-                      href="https://wa.me/233531799325"
+                      href="https://wa.me/233208853140"
                       target="_blank"
                       rel="noreferrer"
                       className="rounded-md border border-paper/20 bg-paper/10 px-3 py-2.5 text-center font-bold text-paper hover:bg-paper/20"

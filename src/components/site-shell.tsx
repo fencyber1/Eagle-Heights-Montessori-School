@@ -31,7 +31,7 @@ function SchoolMonogram({ className = "" }: { className?: string }) {
       aria-hidden="true"
       className={`grid size-12 shrink-0 place-items-center rounded-full bg-action text-xl font-black text-action-foreground shadow-sm ring-1 ring-ink/10 ${className}`}
     >
-      S
+      E
     </span>
   );
 }
@@ -43,7 +43,7 @@ function SchoolCrest({ className = "" }: { className?: string }) {
   return (
     <img
       src="/logo.png"
-      alt="SIMS International School crest"
+      alt="Eagle Heights Montessori School crest"
       width={96}
       height={96}
       onError={() => setMissing(true)}
@@ -64,11 +64,11 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <Link
             to="/"
             className="flex items-center gap-3"
-            aria-label="SIMS International School home"
+            aria-label="Eagle Heights Montessori School home"
           >
             <SchoolCrest />
             <span className="leading-none">
-              <span className="block text-[15px] font-extrabold">SIMS INTERNATIONAL SCHOOL</span>
+              <span className="block text-[15px] font-extrabold">EAGLE HEIGHTS MONTESSORI SCHOOL</span>
               <span className="mt-1 block text-[9px] font-semibold uppercase tracking-[0.22em] text-ink-soft">
                 Empowering Our Generation with Knowledge & Skills
               </span>
@@ -91,7 +91,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
           <div className="hidden items-center gap-2 sm:flex">
             <Button asChild variant="ghost" size="icon" aria-label="Call admissions">
-              <a href="tel:+233531799325">
+              <a href="tel:+233208853140">
                 <Phone />
               </a>
             </Button>
@@ -119,7 +119,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <SheetContent className="w-[88%] bg-paper">
               <SheetHeader className="text-left">
                 <SheetTitle className="font-extrabold text-ink">
-                  SIMS International School
+                  Eagle Heights Montessori School
                 </SheetTitle>
                 <SheetDescription>Explore our school and speak with admissions.</SheetDescription>
               </SheetHeader>
@@ -155,13 +155,13 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div>
             <div className="flex items-center gap-3">
               <SchoolCrest />
-              <span className="font-extrabold text-paper">SIMS International School</span>
+              <span className="font-extrabold text-paper">Eagle Heights Montessori School</span>
             </div>
             <p className="mt-4 font-serif text-lg italic leading-snug text-paper">
               “Empowering Our Generation with Knowledge & Skills.”
             </p>
             <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-paper/50">
-              Our motto
+              Montessori-based · Nursery to JHS 1
             </p>
             <div className="mt-4 flex items-center gap-2">
               <Button
@@ -169,10 +169,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 variant="outline"
                 size="icon"
                 className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper"
-                aria-label="SIMS International School on Facebook"
+                aria-label="Eagle Heights Montessori School on Facebook"
               >
                 <a
-                  href="https://www.facebook.com/simsinternationalschool/"
+                  href="https://www.facebook.com/search/top?q=Eagle%20Heights%20Montessori%20School%20Tema"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -184,10 +184,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 variant="outline"
                 size="icon"
                 className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper"
-                aria-label="SIMS International School on Instagram"
+                aria-label="Eagle Heights Montessori School on Instagram"
               >
                 <a
-                  href="https://www.instagram.com/simsintlschool/"
+                  href="https://www.instagram.com/explore/search/keyword/?q=Eagle%20Heights%20Montessori"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -199,10 +199,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 variant="outline"
                 size="icon"
                 className="size-9 rounded-full border-paper/20 bg-transparent text-paper/70 hover:bg-paper/10 hover:text-paper"
-                aria-label="SIMS International School on TikTok"
+                aria-label="Eagle Heights Montessori School on TikTok"
               >
                 <a
-                  href="https://www.tiktok.com/@simsinternationalschool"
+                  href="https://www.tiktok.com/search?q=Eagle%20Heights%20Montessori%20School"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -231,22 +231,22 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-action">Admissions</p>
             <div className="mt-4 space-y-3 text-sm">
-              <a href="tel:+233531799325" className="flex items-center gap-2 hover:text-paper">
-                <Phone className="size-4" /> 053 179 9325
+              <a href="tel:+233208853140" className="flex items-center gap-2 hover:text-paper">
+                <Phone className="size-4" /> +233 20 885 3140
               </a>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Abase+Road+Ablekuma+New+Town+Accra"
+                href="https://www.google.com/maps/search/?api=1&query=Amsterdam+Street+Sebrepor+Kpone+Katamanso+Greater+Accra"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 hover:text-paper"
               >
-                <MapPin className="size-4" /> Abase Road, Ablekuma New Town
+                <MapPin className="size-4" /> Amsterdam Street, Sebrepor — Tema: PX9Q+HJQ
               </a>
               <a
-                href="mailto:info@simsinternational.edu.gh"
+                href="mailto:info@eagleheightsmontessori.edu.gh"
                 className="flex items-center gap-2 hover:text-paper"
               >
-                <Mail className="size-4" /> info@simsinternational.edu.gh
+                <Mail className="size-4" /> info@eagleheightsmontessori.edu.gh
               </a>
               <Link to="/contact" className="flex items-center gap-2 hover:text-paper">
                 <MessageCircle className="size-4" /> Ask a question
@@ -255,14 +255,15 @@ export function SiteShell({ children }: { children: ReactNode }) {
           </div>
         </div>
         <div className="border-t border-paper/10 px-5 py-5 text-center text-xs text-paper/50">
-          © 2026 SIMS International School · Abase Road, Ablekuma New Town, Accra, Ghana
+          © 2026 Eagle Heights Montessori School · Amsterdam Street, Sebrepor, Kpone Katamanso,
+          Greater Accra Region, Ghana · Tema: PX9Q+HJQ, Unnamed Road
         </div>
       </footer>
 
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink/10 bg-paper/95 p-3 backdrop-blur-md lg:hidden">
         <div className="mx-auto flex max-w-md gap-2">
           <Button asChild variant="outline" size="icon" className="size-11 shrink-0 rounded-full">
-            <a href="tel:+233531799325" aria-label="Call admissions">
+            <a href="tel:+233208853140" aria-label="Call admissions">
               <Phone />
             </a>
           </Button>
@@ -279,7 +280,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             className="size-11 shrink-0 rounded-full border-growth/40 text-growth hover:border-growth hover:bg-growth/10"
           >
             <a
-              href="https://wa.me/233531799325?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20admissions."
+              href="https://wa.me/233208853140?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20admissions."
               target="_blank"
               rel="noreferrer"
               aria-label="Chat with admissions on WhatsApp"

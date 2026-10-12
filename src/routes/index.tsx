@@ -10,9 +10,9 @@ import { JsonLd, seoPage, schoolSchema } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     seoPage({
-      title: "SIMS International School, Accra | Creche to JHS",
+      title: "Eagle Heights Montessori School, Tema & Sebrepor | Nursery to JHS 1",
       description:
-        "SIMS International School, Ablekuma New Town, Accra — Creche to JHS. Ghana curriculum with the international approach.",
+        "Eagle Heights Montessori School, Amsterdam Street Sebrepor & Tema — Nursery to JHS 1. Montessori-based early childhood and primary education.",
       path: "/",
     }),
   component: Index,
@@ -48,7 +48,7 @@ function Index() {
       <section className="relative overflow-hidden bg-ink text-paper">
         <img
           src="/gallery/sims/sims-01.jpg"
-          alt="SIMS graduates throwing caps in the air at the graduation ceremony"
+          alt="Eagle Heights graduates throwing caps in the air at the graduation ceremony"
           fetchPriority="high"
           className="absolute inset-0 size-full object-cover"
         />
@@ -56,8 +56,8 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/40 to-ink/5" />
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:py-32 lg:py-40">
           <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-paper/90">
-            <span className="h-px w-10 bg-action" /> International School in Ghana · Ablekuma New
-            Town · Accra
+            <span className="h-px w-10 bg-action" /> Montessori School in Ghana · Amsterdam Street,
+            Sebrepor · Tema
           </p>
           <h1 className="mt-6 max-w-5xl text-5xl font-black leading-[0.95] sm:text-6xl lg:text-7xl">
             Learn. Grow.{" "}
@@ -66,9 +66,9 @@ function Index() {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-paper/75 sm:text-lg">
-            At SIMS, we believe every child's future begins with a strong foundation. From Creche to
-            JHS, we nurture each child's potential through hands-on, practical learning, strong
-            academics, and values that last a lifetime.
+            At Eagle Heights, we believe every child's future begins with a strong foundation. From
+            Nursery to JHS 1, we nurture each child's potential through hands-on Montessori learning,
+            strong academics, and values that last a lifetime.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button
@@ -90,7 +90,7 @@ function Index() {
         </div>
       </section>
       <Section
-        eyebrow="Why SIMS"
+        eyebrow="Why Eagle Heights"
         title="The confidence parents look for. The opportunity children deserve."
       >
         <div className="grid gap-5 md:grid-cols-4">
@@ -134,31 +134,32 @@ function Index() {
             Empowering Our Generation with Knowledge & Skills
           </h3>
           <p className="mt-3 max-w-3xl leading-relaxed text-ink-soft">
-            At SIMS International School, our motto shapes every school day — from a child's first
-            steps in Creche to graduation day in JHS.
+            At Eagle Heights Montessori School, our motto shapes every school day — from a child's
+            first steps in Nursery to JHS 1.
           </p>
         </div>
       </Section>
       <Section
-        eyebrow="International education in Ghana"
-        title="What a great international school in Ghana looks like."
+        eyebrow="Montessori education in Ghana"
+        title="What a great Montessori school in Ghana looks like."
       >
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-4 leading-relaxed text-ink-soft">
             <p>
               Choosing a school in Ghana is one of the most important decisions a family makes. The
-              years from Creche to JHS shape how a child learns, relates to others, and sees
-              themselves. At SIMS International School, we walk that whole journey with your child.
+              years from Nursery to JHS 1 shape how a child learns, relates to others, and sees
+              themselves. At Eagle Heights Montessori School, we walk that whole journey with your
+              child.
             </p>
             <p>
-              Our school blends the Ghana curriculum with an international, hands-on approach —
-              practical life, sensorial learning, and self-directed discovery in the early years,
-              growing into strong academics, BECE preparation, and leadership in Primary and JHS.
+              Our school offers Montessori-based early childhood and primary education — practical
+              life, sensorial learning, and self-directed discovery in the early years, growing into
+              strong academics and leadership in Primary and JHS 1.
             </p>
             <p>
-              With a warm and homely environment at Ablekuma New Town, and teachers who genuinely
-              care, SIMS gives your child the strongest possible start — and gives you complete
-              peace of mind.
+              With welcoming branches at Amsterdam Street, Sebrepor (Kpone Katamanso) and PX9Q+HJQ,
+              Unnamed Road, Tema, and teachers who genuinely care, Eagle Heights gives your child
+              the strongest possible start — and gives you complete peace of mind.
             </p>
             <Button asChild variant="link" className="mt-2 px-0 text-trust">
               <Link to="/programs">
@@ -168,9 +169,9 @@ function Index() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              "Ghana curriculum + international approach",
+              "Montessori-based early childhood & primary",
               "Small, attentive classes",
-              "Ablekuma New Town, Accra",
+              "Sebrepor & Tema, Greater Accra",
               "Safe & homely environment",
             ].map((x) => (
               <div key={x} className="border-l-4 border-action bg-surface p-5 font-bold">
@@ -180,16 +181,16 @@ function Index() {
           </div>
         </div>
       </Section>
-      <Section eyebrow="Academic programs" title="Four stages, one promise: children who thrive.">
+      <Section eyebrow="Academic programs" title="Stages from Nursery to JHS 1, one promise: children who thrive.">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
             [
-              "Creche",
+              "Nursery",
               "Gentle first steps",
               "Warm care, sensory play, music, and gentle routines for our youngest.",
             ],
             [
-              "Nursery & Kindergarten",
+              "Kindergarten",
               "Confident little explorers",
               "Phonics, numbers through play, art, and growing independence.",
             ],
@@ -199,9 +200,9 @@ function Index() {
               "English, Mathematics, Science and ICT with sound moral training.",
             ],
             [
-              "JHS",
-              "Ready for secondary school",
-              "Full BECE preparation, guidance, and leadership.",
+              "JHS 1",
+              "Ready for the next step",
+              "Strong academics, guidance, and leadership.",
             ],
           ].map(([name, ages, text]) => (
             <article
@@ -226,7 +227,7 @@ function Index() {
           <div className="skew-x-3 overflow-hidden rounded-xl border border-paper/20 bg-paper/10 p-2">
             <div className="grid aspect-[4/3] w-full place-items-center bg-paper/5 text-center">
               <p className="max-w-xs text-sm text-paper/60">
-                Campus photo coming soon — add your SIMS pictures to the gallery.
+                Campus photo coming soon — add your Eagle Heights pictures to the gallery.
               </p>
             </div>
           </div>
@@ -244,7 +245,7 @@ function Index() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-action">Admissions</p>
             <h2 className="mt-2 text-3xl font-black sm:text-4xl">
-              Ready to picture your child at SIMS?
+              Ready to picture your child at Eagle Heights?
             </h2>
             <p className="mt-4 max-w-lg leading-relaxed text-paper/70">
               Tell us what matters to your family. An admissions adviser will help you understand
