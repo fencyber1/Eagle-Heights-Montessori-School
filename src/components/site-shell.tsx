@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail, MapPin, Menu, MessageCircle, Phone } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import { JsonLd, breadcrumbSchema, schoolSchema } from "@/lib/seo";
@@ -36,20 +36,9 @@ function SchoolMonogram({ className = "" }: { className?: string }) {
   );
 }
 
-// Shows public/logo.png (school crest) in its natural aspect; falls back to the monogram until then.
+// Monogram crest — replace with public/logo.png <img> once the new logo is ready.
 function SchoolCrest({ className = "" }: { className?: string }) {
-  const [missing, setMissing] = useState(false);
-  if (missing) return <SchoolMonogram className={className} />;
-  return (
-    <img
-      src="/logo.png"
-      alt="Eagle Heights Montessori School crest"
-      width={96}
-      height={96}
-      onError={() => setMissing(true)}
-      className={`h-12 w-auto shrink-0 rounded-md bg-white object-contain px-1 shadow-sm ring-1 ring-ink/10 ${className}`}
-    />
-  );
+  return <SchoolMonogram className={className} />;
 }
 
 export function SiteShell({ children }: { children: ReactNode }) {

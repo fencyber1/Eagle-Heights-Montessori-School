@@ -15,13 +15,7 @@ export const Route = createFileRoute("/tour")({
   component: Tour,
 });
 
-// TODO: add Eagle Heights tour photos to public/tour/ then list them here:
-//   const photos = [
-//     { src: "/tour/gate.jpg", name: "School Gate & Entrance" },
-//     ...
-//   ];
-const photos: Array<{ src: string; name: string }> = [];
-
+// Photo views — add images later; page currently shows CSS placeholders only.
 const PLACEHOLDER_VIEWS = [
   "School Gate & Entrance",
   "Playground",
@@ -39,39 +33,20 @@ function Tour() {
         intro="Our gate and entrance, playground, outdoor play areas, and classrooms — Eagle Heights Montessori School, Sebrepor & Tema."
       />
       <Section eyebrow="Buildings & facilities" title="Views of Eagle Heights.">
-        {photos.length === 0 ? (
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {PLACEHOLDER_VIEWS.map((name) => (
-              <div
-                key={name}
-                className="grid aspect-square w-full place-items-center rounded-lg border border-ink/10 bg-surface text-center"
-                role="img"
-                aria-label={`${name} — photo coming soon`}
-              >
-                <p className="max-w-[12rem] px-4 text-sm font-bold text-ink-soft">
-                  {name} — photo coming soon
-                </p>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {photos.map((photo) => (
-              <figure
-                key={photo.src}
-                className="block aspect-square w-full overflow-hidden rounded-lg border border-ink/10 bg-surface"
-              >
-                <img
-                  src={photo.src}
-                  alt={photo.name}
-                  loading="lazy"
-                  decoding="async"
-                  className="size-full object-cover"
-                />
-              </figure>
-            ))}
-          </div>
-        )}
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {PLACEHOLDER_VIEWS.map((name) => (
+            <div
+              key={name}
+              className="grid aspect-square w-full place-items-center rounded-lg border border-ink/10 bg-surface text-center"
+              role="img"
+              aria-label={`${name} — photo coming soon`}
+            >
+              <p className="max-w-[12rem] px-4 text-sm font-bold text-ink-soft">
+                {name} — photo coming soon
+              </p>
+            </div>
+          ))}
+        </div>
       </Section>
       <Section dark eyebrow="Like what you see?" title="Come and see it in person.">
         <div className="flex flex-col items-start gap-5">

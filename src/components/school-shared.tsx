@@ -8,20 +8,16 @@ export function PageHero({
   eyebrow,
   title,
   intro,
-  image,
-  imageAlt,
 }: {
   eyebrow: string;
   title: string;
   intro: string;
-  image?: string;
-  imageAlt?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
       <div className="absolute -right-20 -top-24 size-80 rounded-full bg-trust/30 blur-3xl" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-12 lg:py-20">
-        <div className={image ? "lg:col-span-7" : "lg:col-span-9"}>
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:py-20">
+        <div className="max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-action">{eyebrow}</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-black leading-none sm:text-6xl">{title}</h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-paper/75 sm:text-lg">
@@ -36,19 +32,6 @@ export function PageHero({
             </Link>
           </Button>
         </div>
-        {image && (
-          <div className="lg:col-span-5">
-            <div className="-skew-x-3 overflow-hidden rounded-lg border border-paper/20 bg-paper/10 p-2">
-              <img
-                src={image}
-                alt={imageAlt ?? "Eagle Heights Montessori School"}
-                width={1280}
-                height={900}
-                className="aspect-[4/3] w-full object-cover"
-              />
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
