@@ -1,9 +1,6 @@
 export const SITE_URL = "https://sims-international.vercel.app";
 export const SITE_NAME = "Eagle Heights Montessori School";
 export const SITE_SHORT = "Eagle Heights";
-export const OG_IMAGE = `${SITE_URL}/og-image.png`;
-export const OG_IMAGE_WIDTH = 1200;
-export const OG_IMAGE_HEIGHT = 630;
 export const PHONE_MAIN = "+233208853140";
 export const PHONE_DISPLAY = "+233 20 885 3140";
 export const PHONE_LOCAL = "020 885 3140";
@@ -34,17 +31,11 @@ export function seoPage(opts: { title: string; description: string; path: string
       { property: "og:title", content: opts.title },
       { property: "og:description", content: opts.description },
       { property: "og:url", content: url },
-      { property: "og:image", content: OG_IMAGE },
-      { property: "og:image:width", content: String(OG_IMAGE_WIDTH) },
-      { property: "og:image:height", content: String(OG_IMAGE_HEIGHT) },
-      { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Eagle Heights Montessori School" },
       { property: "og:locale", content: "en_GH" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: opts.title },
       { name: "twitter:description", content: opts.description },
-      { name: "twitter:image", content: OG_IMAGE },
       { name: "theme-color", content: "#c21f3c" },
     ],
     links: [{ rel: "canonical", href: url }],
@@ -63,7 +54,6 @@ export const schoolSchema = {
   slogan: MOTTO,
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
-  image: OG_IMAGE,
   email: SITE_EMAIL,
   telephone: PHONE_MAIN,
   address: {

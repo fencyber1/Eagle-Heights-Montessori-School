@@ -89,11 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Eagle Heights Montessori School" },
       { property: "og:locale", content: "en_GH" },
-      { property: "og:image", content: "https://sims-international.vercel.app/og-image.png" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:type", content: "image/png" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
       { name: "theme-color", content: "#c21f3c" },
     ],
     links: [
