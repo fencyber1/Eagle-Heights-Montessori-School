@@ -256,7 +256,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         </div>
         <div className="border-t border-paper/10 px-5 py-5 text-center text-xs text-paper/50">
           © 2026 Eagle Heights Montessori School · Amsterdam Street, Sebrepor, Kpone Katamanso,
-          Greater Accra Region, Ghana · Tema: PX9Q+HJQ, Unnamed Road
+          Greater Accra Region, Ghana · Tema: PX9Q+HJQ
         </div>
       </footer>
 

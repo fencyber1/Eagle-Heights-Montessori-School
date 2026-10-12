@@ -14,11 +14,11 @@ export const ADDRESS_SHORT =
   "Amsterdam Street, Sebrepor, Kpone Katamanso Municipal District, Greater Accra Region, Ghana";
 export const ADDRESS_SEBREPOR =
   "Amsterdam Street, Sebrepor, Kpone Katamanso, Greater Accra Region, Ghana";
-export const ADDRESS_TEMA = "PX9Q+HJQ, Unnamed Road, Tema, Ghana";
+export const ADDRESS_TEMA = "PX9Q+HJQ, Tema, Ghana";
 export const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Amsterdam+Street+Sebrepor+Kpone+Katamanso+Greater+Accra";
 export const MAPS_TEMA_URL =
-  "https://www.google.com/maps/search/?api=1&query=PX9Q%2BHJQ+Unnamed+Road+Tema+Ghana";
+  "https://www.google.com/maps/search/?api=1&query=PX9Q%2BHJQ+Tema+Ghana";
 export const HOURS_SHORT = "Mon–Sat · Open 24 hours · Sun Closed";
 
 export function pageUrl(path: string) {
@@ -91,7 +91,7 @@ export const schoolSchema = {
       name: "Eagle Heights Montessori School — Tema Branch",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "PX9Q+HJQ, Unnamed Road, Tema",
+        streetAddress: "PX9Q+HJQ, Tema",
         addressLocality: "Tema",
         addressRegion: "Greater Accra",
         addressCountry: "GH",
@@ -151,7 +151,7 @@ export const faqSchema = {
       name: "Where is Eagle Heights Montessori School located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We are located in Tema, Ghana at PX9Q+HJQ, Unnamed Road, Tema, with an additional branch at Amsterdam Street, Sebrepor, Kpone Katamanso Municipal District, Greater Accra Region.",
+        text: "We are located in Tema, Ghana at PX9Q+HJQ, Tema, with an additional branch at Amsterdam Street, Sebrepor, Kpone Katamanso Municipal District, Greater Accra Region.",
       },
     },
   ],

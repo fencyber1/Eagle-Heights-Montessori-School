@@ -50,7 +50,7 @@ function About() {
             <p className="leading-relaxed text-paper/70">
               Eagle Heights Montessori School is located on Amsterdam Street in Sebrepor, within the
               Kpone Katamanso Municipal District in the Greater Accra Region of Ghana, with an
-              additional branch at PX9Q+HJQ, Unnamed Road, Tema. We offer Montessori-based early
+              additional branch at PX9Q+HJQ, Tema. We offer Montessori-based early
               childhood and primary education — from Nursery to JHS 1 — without losing our personal
               character.
             </p>

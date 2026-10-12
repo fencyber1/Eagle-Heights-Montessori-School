@@ -158,7 +158,7 @@ function Index() {
             </p>
             <p>
               With welcoming branches at Amsterdam Street, Sebrepor (Kpone Katamanso) and PX9Q+HJQ,
-              Unnamed Road, Tema, and teachers who genuinely care, Eagle Heights gives your child
+              Tema, and teachers who genuinely care, Eagle Heights gives your child
               the strongest possible start — and gives you complete peace of mind.
             </p>
             <Button asChild variant="link" className="mt-2 px-0 text-trust">

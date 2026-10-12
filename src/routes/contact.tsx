@@ -71,7 +71,7 @@ function Contact() {
                   Sebrepor Branch: Amsterdam Street, Sebrepor, Kpone Katamanso, Greater Accra Region
                 </p>
                 <p className="mt-1 text-sm text-paper/60">
-                  Tema Branch: PX9Q+HJQ, Unnamed Road, Tema
+                  Tema Branch: PX9Q+HJQ, Tema
                 </p>
                 <p className="mt-1 text-sm text-paper/60">
                   Mon–Sat · Open 24 hours · Sun Closed
@@ -93,7 +93,7 @@ function Contact() {
                 </Button>
                 <Button asChild variant="link" className="mt-1 px-0 text-paper">
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=PX9Q%2BHJQ+Unnamed+Road+Tema+Ghana"
+                    href="https://www.google.com/maps/search/?api=1&query=PX9Q%2BHJQ+Tema+Ghana"
                     target="_blank"
                     rel="noreferrer"
                   >
